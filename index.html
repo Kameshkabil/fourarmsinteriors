@@ -19,9 +19,9 @@
 <meta property="og:description" content="Premium Interior, Exterior, Renovation, Truss, PUF Panel & Building Lifting services in Chennai. 10+ Years Experience. 500+ Happy Clients.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fourarmsinteriors.com/">
-<meta property="og:image" content="https://fourarmsinteriors.com/images/favicon.jpeg">
+<meta property="og:image" content="https://fourarmsinteriors.com/images/favicon-Photoroom.png">
 
-<link rel="icon" type="image/jpeg" href="images/favicon.jpeg">
+<link rel="icon" type="image/png" href="images/favicon-Photoroom.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -356,8 +356,8 @@ align-items:center;
 }
 
 .image-popup img{
-max-width:85%;
-max-height:85%;
+max-width:90%;
+max-height:90%;
 border-radius:12px;
 box-shadow:0 20px 40px rgba(0,0,0,0.4);
 animation:zoomIn 0.3s ease;
@@ -477,6 +477,12 @@ opacity:1;
 background:#F9A826;
 color:white;
 transform:scale(1.1);
+}
+
+/* Prevent background scrolling */
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
 }
 
 </style>
@@ -649,16 +655,38 @@ FourArms Interiors is a trusted construction and renovation company delivering i
       <!-- INTERIOR -->
       <img src="images/interior-1.jpg"  alt="Interior Design Project in Chennai" class="gallery-item interior">
       <img src="images/interior-2.jpg"  alt="Interior Design Project in Chennai" class="gallery-item interior">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"  alt="Interior Design Project in Chennai" class="gallery-item interior">
-      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013"  alt="Interior Design Project in Chennai" class="gallery-item interior">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"  alt="Interior Design Project in Chennai" class="gallery-item interior">
-      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013"  alt="Interior Design Project in Chennai" class="gallery-item interior">
+      <img src="images/interior-3.webp"  alt="Interior Design Project in Chennai" class="gallery-item interior">
+      <img src="images/interior-4.jpg"  alt="Interior Design Project in Chennai" class="gallery-item interior">
+      <img src="images/interior-5.webp"  alt="Interior Design Project in Chennai" class="gallery-item interior">
+      <img src="images/interior-6.webp"  alt="Interior Design Project in Chennai" class="gallery-item interior">
+      <img src="images/interior-7.webp"  alt="Interior Design Project in Chennai" class="gallery-item interior">
+      <img src="images/interior-8.jpg"  alt="Interior Design Project in Chennai" class="gallery-item interior">
+      <img src="images/interior-9.jpg"  alt="Interior Design Project in Chennai" class="gallery-item interior">
+      <img src="images/interior-10.jpg"  alt="Interior Design Project in Chennai" class="gallery-item interior">
 
       <!-- EXTERIOR -->
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
+      <img src="images/exterior-1.jpg" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
+      <img src="images/exterior-2.webp" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
+      <img src="images/exterior-3.jpg" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
+      <img src="images/exterior-4.jpg" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
+      <img src="images/exterior-5.jpg" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
+      <img src="images/exterior-6.jpg" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
+      <img src="images/exterior-7.jpg" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
+      <img src="images/exterior-8.jpg" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
+      <img src="images/exterior-9.webp" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
+      <img src="images/exterior-10.jpg" alt="Exterior Design Project in Chennai" class="gallery-item exterior">
 
       <!-- RENOVATION -->
-      <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471" alt="Renovation Project in Chennai" class="gallery-item renovation">
+      <img src="images/renovation-9.jpg" alt="Renovation Project in Chennai" class="gallery-item renovation">
+      <img src="images/renovation-2.0.webp" alt="Renovation Project in Chennai" class="gallery-item renovation">
+      <img src="images/renovation-2.jpg" alt="Renovation Project in Chennai" class="gallery-item renovation">
+      <img src="images/renovation-3.jpg" alt="Renovation Project in Chennai" class="gallery-item renovation">
+      <img src="images/renovation-4.jpg" alt="Renovation Project in Chennai" class="gallery-item renovation">
+      <img src="images/renovation-5.jpg" alt="Renovation Project in Chennai" class="gallery-item renovation">
+      <img src="images/renovation-6.jpg" alt="Renovation Project in Chennai" class="gallery-item renovation">
+      <img src="images/renovation-7.webp" alt="Renovation Project in Chennai" class="gallery-item renovation">
+      <img src="images/renovation-8.jpg" alt="Renovation Project in Chennai" class="gallery-item renovation">
+      <img src="images/renovation-1.jpg" alt="Renovation Project in Chennai" class="gallery-item renovation">
 
       <!-- LIFTING -->
       <img src="images/Rotate-building.webp" alt="Building Lifting Project in Chennai" class="gallery-item lifting">
@@ -714,7 +742,7 @@ FourArms Interiors is a trusted construction and renovation company delivering i
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "FourArms Interiors",
-  "image": "https://fourarmsinteriors.com/images/favicon.jpeg",
+  "image": "https://fourarmsinteriors.com/images/favicon-Photoroom.png",
   "telephone": "+919962651176",
   "email": "aaron.fourarms@gmail.com",
   "address": {
@@ -738,6 +766,8 @@ let title = document.getElementById("modalTitle");
 
 modal.style.display = "block";
 
+document.body.classList.add("no-scroll");
+
 images.forEach(img=>{
 if(img.classList.contains(category)){
 img.style.display="block";
@@ -752,7 +782,16 @@ title.innerText = "Our " + category.charAt(0).toUpperCase() + category.slice(1) 
 }
 
 function closeModal(){
-document.getElementById("serviceModal").style.display="none";
+  document.getElementById("serviceModal").style.display="none";
+  checkScrollLock();
+}
+
+function checkScrollLock() {
+    let modal = document.getElementById("serviceModal");
+
+    if (modal.style.display === "none") {
+        document.body.classList.remove("no-scroll");
+    }
 }
 
 /* IMAGE CLICK ZOOM */
